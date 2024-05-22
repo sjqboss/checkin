@@ -10,10 +10,10 @@ def run():
         youdao_sign=YouDao_user_login.Youdao(youdao_user, redis_info)
         content= youdao_sign.run() + '\n\n'
         title = "【有道】"
-    if ali_refresh_token != None :
-        Aliyun=aliyunpan.Ali(ali_refresh_token, redis_info)
-        content += Aliyun.run() + '\n\n'
-        title += "【阿里】"
+    # if ali_refresh_token != None :
+    #     Aliyun=aliyunpan.Ali(ali_refresh_token, redis_info)
+    #     content += Aliyun.run() + '\n\n'
+    #     title += "【阿里】"
     if ty_user != None and ty_pwd != None:
         content += tianyiyunpan.main(ty_user, ty_pwd)
         title += "【天翼】"
