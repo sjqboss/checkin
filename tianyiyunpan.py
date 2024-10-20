@@ -248,5 +248,5 @@ def main(ty_username, ty_password):
 if __name__ == "__main__":
     if ty_user != None and ty_pwd != None:
         content = main(ty_user, ty_pwd)
-        send = MessageSend()
-        send.send_all(message_tokens,'天翼盘签到', content)
+        # send = MessageSend()
+        # send.send_all(message_tokens,'天翼盘签到', content)
