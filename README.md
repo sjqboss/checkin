@@ -1,3 +1,7 @@
+20241021 添加了新的通知，原有的总是出问题。
+![image](https://github.com/user-attachments/assets/d65a6b82-9918-4dc7-a00f-a1f9c1eb0e8e)
+
+
 # 每日签到 GitHub Action部署
 
 ## 功能简介
