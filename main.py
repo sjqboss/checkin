@@ -2,6 +2,7 @@
 from message_send import MessageSend
 from config import message_tokens, youdao_cookie,ali_refresh_token,ty_pwd,ty_user,youdao_user, redis_info
 import aliyunpan, tianyiyunpan,YouDao_user_login
+import notify
 
 def run():
     content =''
@@ -20,6 +21,10 @@ def run():
 
     send = MessageSend()
     send.send_all(message_tokens,title+'每日签到',content)
+    # 另一种通知方式
+    notify.send(title+'每日签到',content)
+    
+
 if __name__ == "__main__":
     run()
 
