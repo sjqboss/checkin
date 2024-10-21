@@ -5,7 +5,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from message_send import MessageSend
-from config import message_tokens, youdao_user,redis_info 
+from config import message_tokens, youdao_user,redis_info
+import notify
 
 class Youdao:
     def __init__(self, Youdao_user:str ='', Redis_info:str = '') -> None:
@@ -140,6 +141,9 @@ class Youdao:
 if __name__ == "__main__":
     # if youdao_cookie != None:
     youdao=Youdao(youdao_user,redis_info)
-    print(youdao.run()) 
+    # print(youdao.run()) 
     # send= MessageSend()
     # send.send_all(message_tokens,'有道笔记签到',msg)
+    content= youdao.run() + '\n\n'
+    title = "【有道】"
+    notify.send(title, content)
