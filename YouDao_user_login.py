@@ -144,6 +144,4 @@ if __name__ == "__main__":
     # print(youdao.run()) 
     # send= MessageSend()
     # send.send_all(message_tokens,'有道笔记签到',msg)
-    content= youdao.run() + '\n\n'
-    title = "【有道】"
-    notify.send(title, content)
+    
