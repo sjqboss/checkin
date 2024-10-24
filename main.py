@@ -37,7 +37,7 @@ def ty_run():
             content += tianyiyunpan.main(user_ty[i], pwd_ty[i])
             title += "【天翼】"+user_ty[i]
             notify.send(title+' 每日签到',content)
-            sleep(120)
+            time.sleep(120)
         
 if __name__ == "__main__":
     ty_run()
