@@ -3,7 +3,7 @@ from message_send import MessageSend
 from config import message_tokens, youdao_cookie,ali_refresh_token,ty_pwd,ty_user,youdao_user, redis_info
 import aliyunpan, tianyiyunpan,YouDao_user_login
 import notify
-
+import time
 def run():
     content =''
     title = ""
@@ -36,7 +36,8 @@ def ty_run():
         if user_ty[i] != None and pwd_ty[i] != None:
             content += tianyiyunpan.main(user_ty[i], pwd_ty[i])
             title += "【天翼】"+user_ty[i]
-            notify.send(title+'每日签到',content)
+            notify.send(title+'每日签到'+content)
+            sleep(120)
         
 if __name__ == "__main__":
     ty_run()
