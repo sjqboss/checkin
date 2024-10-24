@@ -4,7 +4,7 @@ from config import message_tokens, youdao_cookie,ali_refresh_token,ty_pwd,ty_use
 import aliyunpan, tianyiyunpan,YouDao_user_login
 import notify
 import time
-def run():
+def yd_run():
     content =''
     title = ""
     if youdao_user != None:
@@ -39,10 +39,11 @@ def ty_run():
             content = tianyiyunpan.main(user_ty[i], pwd_ty[i])
             title = "【天翼】"+user_ty[i]
             notify.send(title+' 每日签到',content)
-            time.sleep(30)
+            time.sleep(120)
         i+=1
         
 if __name__ == "__main__":
+    yd_run()
     ty_run()
 
 
