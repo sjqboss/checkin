@@ -200,7 +200,7 @@ def main():
         result_list = [res1, res2, res3, res4]
         result_string = "。".join(result_list)
         print(result_string)
-        title = "【天翼】"+user_ty[i]
+        title = f"【天翼】{username}"
         notify.send(title+' 每日签到',content)
 
 
