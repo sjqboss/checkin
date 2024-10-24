@@ -27,8 +27,14 @@ jobs:
       run: python main.py
       env:
         ALI_REFRESH_TOKEN: ${{ secrets.ALI_REFRESH_TOKEN }}
-        TY_USER: ${{ secrets.TY_USER }}
-        TY_PWD: ${{ secrets.TY_PWD }}
+        TY_USER0: ${{ secrets.TY_USER0 }}
+        TY_PWD0: ${{ secrets.TY_PWD0 }}
+        TY_USER1: ${{ secrets.TY_USER1 }}
+        TY_PWD1: ${{ secrets.TY_PWD1 }}
+        TY_USER2: ${{ secrets.TY_USER2 }}
+        TY_PWD2: ${{ secrets.TY_PWD2 }}
+        TY_USER3: ${{ secrets.TY_USER3 }}
+        TY_PWD3: ${{ secrets.TY_PWD3 }}
         YOUDAO_COOKIE: ${{ secrets.YOUDAO_COOKIE }}
         PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
         SERVERCHAN_SENDKEY: ${{ secrets.SERVERCHAN_SENDKEY }}
