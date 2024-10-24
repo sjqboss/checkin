@@ -32,9 +32,9 @@ def ty_run():
     print(user_ty)
     for i in range(len(user_ty)):
         if user_ty[i] != None and pwd_ty[i] != None:
-        content += tianyiyunpan.main(user_ty[i], pwd_ty[i])
-        title += "【天翼】"+user_ty[i]
-    notify.send(title+'每日签到',content)
+            content += tianyiyunpan.main(user_ty[i], pwd_ty[i])
+            title += "【天翼】"+user_ty[i]
+            notify.send(title+'每日签到',content)
         
 if __name__ == "__main__":
     try_run()
