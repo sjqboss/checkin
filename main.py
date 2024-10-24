@@ -39,7 +39,7 @@ def ty_run():
             title += "【天翼】"+user_ty[i]
             notify.send(title+' 每日签到',content)
             time.sleep(30)
-            i+=1
+        i+=1
         
 if __name__ == "__main__":
     ty_run()
