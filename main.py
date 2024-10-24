@@ -1,7 +1,7 @@
 
 from message_send import MessageSend
 from config import message_tokens, youdao_cookie,ali_refresh_token,ty_pwd,ty_user,youdao_user, redis_info
-import aliyunpan, tianyiyunpan,YouDao_user_login
+import aliyunpan, tianyiyunpan,YouDao_user_login,tianyi_task
 import notify
 import time
 def yd_run():
@@ -24,30 +24,30 @@ def yd_run():
     # 另一种通知方式
     notify.send(title+'每日签到',content)
 
-def ty_run():
-    content =''
-    title = ""
-    user_ty = []
-    pwd_ty = []
-    user_ty.extend(ty_user.split(","))
-    pwd_ty.extend(ty_pwd.split(","))
-    print(user_ty)
-    for i in range(len(user_ty)):
-        print(i)
-        if user_ty[i] != None and pwd_ty[i] != None:
-            print(user_ty[i])
-            try:
-                content = tianyiyunpan.main(user_ty[i], pwd_ty[i])
-            except:
-                pass
-            title = "【天翼】"+user_ty[i]
-            notify.send(title+' 每日签到',content)
-            time.sleep(20)
-        i+=1
+# def ty_run():
+#     content =''
+#     title = ""
+#     user_ty = []
+#     pwd_ty = []
+#     user_ty.extend(ty_user.split(","))
+#     pwd_ty.extend(ty_pwd.split(","))
+#     print(user_ty)
+#     for i in range(len(user_ty)):
+#         print(i)
+#         if user_ty[i] != None and pwd_ty[i] != None:
+#             print(user_ty[i])
+#             try:
+#                 content = tianyiyunpan.main(user_ty[i], pwd_ty[i])
+#             except:
+#                 pass
+#             title = "【天翼】"+user_ty[i]
+#             notify.send(title+' 每日签到',content)
+#             time.sleep(20)
+#         i+=1
         
 if __name__ == "__main__":
     yd_run()
-    ty_run()
+    tianyi_task.main()
 
 
     
