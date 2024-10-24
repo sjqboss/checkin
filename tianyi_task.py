@@ -25,7 +25,7 @@ def get_accounts():
     return accounts
 
 accounts = get_accounts()
-print(accounts)
+# print(accounts)
 
 def int2char(a):
     return BI_RM[a]
@@ -190,7 +190,7 @@ def main():
         print(response.text)
         if ("errorCode" in response.text):
             print(response.json()["errorCode"])
-            res4 = "抽奖失败,次数不足"
+            res4 = "抽奖失败,次数不足。"
         else:
             prizeName = response.json()['prizeName']
             print(f"第3次抽奖获得{prizeName}")
