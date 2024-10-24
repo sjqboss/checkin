@@ -15,18 +15,29 @@ def run():
     #     Aliyun=aliyunpan.Ali(ali_refresh_token, redis_info)
     #     content += Aliyun.run() + '\n\n'
     #     title += "【阿里】"
-    if ty_user != None and ty_pwd != None:
-        content += tianyiyunpan.main(ty_user, ty_pwd)
-        title += "【天翼】"
+    # if ty_user != None and ty_pwd != None:
+    #     content += tianyiyunpan.main(ty_user, ty_pwd)
+    #     title += "【天翼】"
 
     send = MessageSend()
     send.send_all(message_tokens,title+'每日签到',content)
     # 另一种通知方式
     notify.send(title+'每日签到',content)
-    
 
+def ty_run():
+    user_ty = []
+    pwd_ty = []
+    user_ty.extend(ty_user.split(","))
+    pwd_ty.extend(ty_pwd.split(","))
+    print(user_ty)
+    for i in range(len(user_ty)):
+        if user_ty[i] != None and pwd_ty[i] != None:
+        content += tianyiyunpan.main(user_ty[i], pwd_ty[i])
+        title += "【天翼】"+user_ty[i]
+    notify.send(title+'每日签到',content)
+        
 if __name__ == "__main__":
-    run()
+    try_run()
 
 
     
