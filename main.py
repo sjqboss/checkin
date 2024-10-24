@@ -37,7 +37,7 @@ def ty_run():
             notify.send(title+'每日签到',content)
         
 if __name__ == "__main__":
-    try_run()
+    ty_run()
 
 
     
