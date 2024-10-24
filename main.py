@@ -35,6 +35,7 @@ def ty_run():
     for i in range(len(user_ty)):
         print(i)
         if user_ty[i] != None and pwd_ty[i] != None:
+            print(user_ty[i])
             content = tianyiyunpan.main(user_ty[i], pwd_ty[i])
             title = "【天翼】"+user_ty[i]
             notify.send(title+' 每日签到',content)
