@@ -201,7 +201,7 @@ def main():
         result_string = "。".join(result_list)
         print(result_string)
         title = f"【天翼】{username}"
-        notify.send(title+' 每日签到',content)
+        notify.send(title+' 每日签到',result_string)
 
 
 
