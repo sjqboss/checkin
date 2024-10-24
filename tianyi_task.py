@@ -9,7 +9,7 @@ import rsa
 import requests
 import random
 from config import ty_pwd, ty_user
-import notice
+import notify
 
 BI_RM = list("0123456789abcdefghijklmnopqrstuvwxyz")
 
