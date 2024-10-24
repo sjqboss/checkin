@@ -25,6 +25,8 @@ def run():
     notify.send(title+'每日签到',content)
 
 def ty_run():
+    content =''
+    title = ""
     user_ty = []
     pwd_ty = []
     user_ty.extend(ty_user.split(","))
