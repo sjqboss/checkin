@@ -8,9 +8,16 @@ def yd_run():
     content =''
     title = ""
     if youdao_user != None:
-        youdao_sign=YouDao_user_login.Youdao(youdao_user, redis_info)
-        content= youdao_sign.run() + '\n\n'
-        title = "【有道】"
+        yd_user = []
+        yd_user = yd_user.extend(youdao_user.split("&"))
+        for user in yd_user:
+            
+            youdao_sign=YouDao_user_login.Youdao(user, redis_info)
+            content= youdao_sign.run() + '\n\n'
+            title = "【有道】"
+            # 另一种通知方式
+            notify.send(title+'每日签到',content)
+            
     # if ali_refresh_token != None :
     #     Aliyun=aliyunpan.Ali(ali_refresh_token, redis_info)
     #     content += Aliyun.run() + '\n\n'
@@ -19,10 +26,10 @@ def yd_run():
     #     content += tianyiyunpan.main(ty_user, ty_pwd)
     #     title += "【天翼】"
 
-    send = MessageSend()
-    send.send_all(message_tokens,title+'每日签到',content)
-    # 另一种通知方式
-    notify.send(title+'每日签到',content)
+    # send = MessageSend()
+    # send.send_all(message_tokens,title+'每日签到',content)
+            
+    
 
 # def ty_run():
 #     content =''
