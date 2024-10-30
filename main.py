@@ -9,7 +9,7 @@ def yd_run():
     title = ""
     if youdao_user != None:
         yd_user = []
-        yd_user = yd_user.extend(youdao_user.split("&"))
+        yd_user = youdao_user.split("&")
         for user in yd_user:
             
             youdao_sign=YouDao_user_login.Youdao(user, redis_info)
