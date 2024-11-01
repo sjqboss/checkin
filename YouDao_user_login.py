@@ -132,7 +132,7 @@ class Youdao:
         cookie= self.get_redis()
         massage=self.signin(cookie)
         if "有道签到获得" in massage:
-            return massage
+            return self.user + massage
         cookie= self.login()
         massage= self.signin(cookie)
         massage+= self.store_redis(cookie)
