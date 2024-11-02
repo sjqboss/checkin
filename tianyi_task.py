@@ -151,12 +151,12 @@ def main():
             response = s.get(surl, headers=headers)
             print(response.text)
             netdiskBonus = response.json()['netdiskBonus']
-            if (response.json()['isSign'] == "false"):
-                print(f"{username}签到，签到获得{netdiskBonus}M空间")
-                res1 = f"{username}签到，签到获得{netdiskBonus}M空间"
-            else:
+            if (response.json()['isSign'] == "true"):
                 print(f"{username}已经签到过了，签到获得{netdiskBonus}M空间")
                 res1 = f"{username}已经签到过了，签到获得{netdiskBonus}M空间"
+            else:
+                print(f"{username}签到成功，签到获得{netdiskBonus}M空间")
+                res1 = f"{username}签到成功，签到获得{netdiskBonus}M空间"
 
             headers = {
                 'User-Agent': 'Mozilla/5.0 (Linux; Android 5.1.1; SM-G930K Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/74.0.3729.136 Mobile Safari/537.36 Ecloud/8.6.3 Android/22 clientId/355325117317828 clientModel/SM-G930K imsi/460071114317824 clientChannelId/qq proVersion/1.0.6',
