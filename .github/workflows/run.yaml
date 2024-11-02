@@ -24,7 +24,7 @@ jobs:
         pip install -r requirements.txt
 
     - name: Run sign-in script
-      run: python main.py || python main.py
+      run: my-script.sh
       env:
         ALI_REFRESH_TOKEN: ${{ secrets.ALI_REFRESH_TOKEN }}
         TY_USER: ${{ secrets.TY_USER }}
@@ -40,4 +40,7 @@ jobs:
         REDIS_INFO: ${{ secrets.REDIS_INFO }}
         TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
         QYWX_AM: ${{ secrets.QYWX_AM }}
+
+      
+
     
