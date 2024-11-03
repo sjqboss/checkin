@@ -151,7 +151,8 @@ def main():
             response = s.get(surl, headers=headers)
             print(response.text)
             netdiskBonus = response.json()['netdiskBonus']
-            if (response.json()['isSign'] == "true"):
+            # isSign 返回的数据类型为bool
+            if (response.json()['isSign'] == True):
                 print(f"{username}已经签到过了，签到获得{netdiskBonus}M空间")
                 res1 = f"{username}已经签到过了，签到获得{netdiskBonus}M空间"
             else:
