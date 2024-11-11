@@ -10,7 +10,9 @@
 >
 > Example：TY_USER:  用户1,用户2,用户3    TY_PWD:    password,password,password   账号和密码分别对应
 >
-> 通知采用了青龙的多渠道通知方式，参照notify.py可以自己设定。默认设置的是企业微信应用，QYWX_AM 
+> 通知采用了青龙的多渠道通知方式，参照notify.py可以自己设定。默认设置的是企业微信应用，QYWX_AM
+>
+> ![image](https://im.litscorpi.top/1731326479308.png)
 
 > 20241021 添加了新的通知，原有的总是出问题。
 > 
