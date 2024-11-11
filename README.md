@@ -1,15 +1,19 @@
 > 20241111
+>
 > 有道云支持多账号，账号间用&分隔。
 >
 > Example：YOUDAO_USER   qi****@126.com,**yourpassword**&one***@163.com,**yourpassword
 >
 > REDIS_INFO 可以实现Cookie持久化。
 >
-> 天翼云盘也支持多账号，账号和密码用,分隔。Example：TY_USER  用户1,用户2,用户3    TY_PWD    password,password,password   账号和密码分别对应
+> 天翼云盘也支持多账号，账号和密码用,分隔。
+>
+> Example：TY_USER  用户1,用户2,用户3    TY_PWD    password,password,password   账号和密码分别对应
 >
 > 通知采用了青龙的多渠道通知方式，可以自己设定。默认设置的是企业微信应用，QYWX_AM 
 
 > 20241021 添加了新的通知，原有的总是出问题。
+> 
 ![image](https://github.com/user-attachments/assets/d65a6b82-9918-4dc7-a00f-a1f9c1eb0e8e)
 
 
